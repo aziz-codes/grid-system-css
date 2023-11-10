@@ -5,18 +5,36 @@
 }
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 20% 20% 40% 20%;
   justify-items: center;
   align-content: center;
   gap: 5px;
 }
 .grid-container .grid-item {
-  background-color: red;
+  /* padding: 10px; */
+  border: 1px solid skyblue;
   width: 100%;
+  background-color: red;
 }
-@media screen and (max-width: 768px) {
+.navbar {
+  height: 60px;
+  background-color: skyblue;
+  /* padding: 0 10px; */
+  display: grid;
+  grid-template-columns: 20% auto 20%;
+  /* justify-content: space-between; */
+}
+.navbar > div {
+  border: 1px solid moccasin;
+  display: flex;
+  flex-wrap: wrap;
+}
+.navbar > div:nth-child(2) {
+  background-color: red;
+}
+/* @media screen and (max-width: 768px) {
   .grid-container {
     grid-template-columns: auto;
     padding: 1rem 1.5rem;
   }
-}
+} */
